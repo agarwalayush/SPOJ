@@ -1,0 +1,105 @@
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+	int array[88];
+	array[0] = 7;
+	array[1] = 18;
+	array[2] = 10;
+	array[3] = 11;
+	array[4] = 7;
+	array[5] = 17;
+	array[6] = 11;
+	array[7] = 15;
+	array[8] = 29;
+	array[9] = 5;
+	array[10] = 21;
+	array[11] = 13;
+	array[12] = 26;
+	array[13] = 14;
+	array[14] = 11;
+	array[15] = 23;
+	array[16] = 22;
+	array[17] = 9;
+	array[18] = 73;
+	array[19] = 17;
+	array[20] = 42;
+	array[21] = 7;
+	array[22] = 98;
+	array[23] = 15;
+	array[24] = 61;
+	array[25] = 22;
+	array[26] = 84;
+	array[27] = 24;
+	array[28] = 30;
+	array[29] = 9;
+	array[30] = 38;
+	array[31] = 15;
+	array[32] = 54;
+	array[33] = 27;
+	array[34] = 9;
+	array[35] = 61;
+	array[36] = 38;
+	array[37] = 22;
+	array[38] = 19;
+	array[39] = 178;
+	array[40] = 38;
+	array[41] = 53;
+	array[42] = 79;
+	array[43] = 68;
+	array[44] = 166;
+	array[45] = 20;
+	array[46] = 9;
+	array[47] = 22;
+	array[48] = 7;
+	array[49] = 21;
+	array[50] = 72;
+	array[51] = 133;
+	array[52] = 41;
+	array[53] = 10;
+	array[54] = 82;
+	array[55] = 92;
+	array[56] = 64;
+	array[57] = 129;
+	array[58] = 86;
+	array[59] = 73;
+	array[60] = 67;
+	array[61] = 19;
+	array[62] = 66;
+	array[63] = 115;
+	array[64] = 52;
+	array[65] = 24;
+	array[66] = 22;
+	array[67] = 176;
+	array[68] = 10;
+	array[69] = 57;
+	array[70] = 137;
+	array[71] = 239;
+	array[72] = 41;
+	array[73] = 70;
+	array[74] = 60;
+	array[75] = 116;
+	array[76] = 81;
+	array[77] = 79;
+	array[78] = 55;
+	array[79] = 102;
+	array[80] = 49;
+	array[81] = 5;
+	array[82] = 22;
+	array[83] = 54;
+	array[84] = 52;
+	array[85] = 113;
+	array[86] = 15;
+	array[87] = 66;
+	int read = 0;
+	scanf("%d", &read);
+	for(int i = 0; read != 0; i++)
+	{
+		printf("%d\n", array[read-13]);
+		scanf("%d", &read);
+		//scanf("%d", &read);
+	}
+	return 0;
+}
