@@ -22,7 +22,6 @@ void incrByOne(char incr[1000000])
 		}
 		if(right == 0 && incr[right] < '9')
 		  {
-		    printf("right == 0 && incr[right] < 9\n");
 		    incr[right] = incr[right] + 1;
 		  }
 		else if(right > 0)
@@ -33,7 +32,7 @@ void incrByOne(char incr[1000000])
 		}
 		else // all 9s; shift over
 		{
-		  printf("all 9s; shift over\n");
+		  incr[0] = '0';
        			int shiftRight = strlen(incr);
 			incr[shiftRight+1] = 0;
 			while(shiftRight > 0)
@@ -41,8 +40,7 @@ void incrByOne(char incr[1000000])
 				incr[shiftRight] = incr[shiftRight-1];
 				shiftRight = shiftRight - 1;
 			}
-			printf("shiftRight: %d\n", shiftRight);
-			incr[shiftRight] = 1; // 999->1000
+			incr[shiftRight] = '1'; // 999->1000
 			
 		}
 	}
