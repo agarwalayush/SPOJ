@@ -26,7 +26,6 @@ void incrByOne(char incr[1000000])
 		  }
 		else if(right > 0)
 		{
-		  printf("right > 0\n");
 			incr[right] = incr[right] + 1;
 			right = right - 1;
 		}
