@@ -113,6 +113,7 @@ int nextNumber()
 		right = right - 1;
 		if(left > right)
 		{
+		  printf("FDSOJIFJSOIFSD\n");
 			left = 0;
 			right = strlen(charRep) - 1;
 		}
