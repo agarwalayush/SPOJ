@@ -78,7 +78,7 @@ int nextNumber()
 	int left = 0;
 	int right = strlen(charRep) - 1;
 	int lastMatch = 0;
-	while(isPalindrome(charRep) == 0)
+	while(isPalindrome(charRep, lastMatch) == 0)
 	{
 		//printf("\t%s is not a palindrome.\n", charRep);
 		if(charRep[left] >= charRep[right]) // ex: 550, 5 > 0, incr 0 to be 5
@@ -113,8 +113,7 @@ int nextNumber()
 		right = right - 1;
 		if(left > right)
 		{
-		  printf("FDSOJIFJSOIFSD\n");
-			left = 0;
+		  left = 0;
 			right = strlen(charRep) - 1;
 		}
 	}
