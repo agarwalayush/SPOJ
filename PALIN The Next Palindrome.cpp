@@ -69,10 +69,11 @@ bool nextNumber()
 	incrByOne(charRep);
 	int left = 0;
 	int right = strlen(charRep) - 1;
+	int lastMatch = 0;
 	while(!isPalindrome(charRep))
 	{
 		//printf("\t%s is not a palindrome.\n", charRep);
-		if(charRep[left] > charRep[right]) // ex: 550, 5 > 0, incr 0 to be 5
+		if(charRep[left] >= charRep[right]) // ex: 550, 5 > 0, incr 0 to be 5
 		{
 			charRep[right] = charRep[left];
 		}
@@ -82,7 +83,9 @@ bool nextNumber()
 			charRep[right] = '0';
 			if(charRep[right-1] != '9') // ex: 516->520
 			{
-				charRep[right-1] = charRep[right-1] + 1;
+		     		charRep[right-1] = charRep[right-1] + 1;
+				lastMatch = right;
+				charRep[right] = charRep[left];
 			}
 			else // ex: 51992->52000
 			{
@@ -94,8 +97,8 @@ bool nextNumber()
 				}
 				charRep[right] = charRep[right] + 1;
 				// start at beginning
-				left = -1;
-				right = strlen(charRep);
+				left = strlen(charRep) - lastMatch;
+				right = lastMatch;
 			}
 		}
 		left = left + 1;
