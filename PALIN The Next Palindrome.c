@@ -44,10 +44,19 @@ void incrByOne(char incr[1000000])
 	}
 }
 
-int isPalindrome(char numberCheck[1000000])
+int isPalindrome(char numberCheck[1000000], int lastMatch)
 {
-	int start = 0;
-	int end = strlen(numberCheck) - 1;
+  int start, end;
+  if(lastMatch == 0)
+    {
+        start = 0;
+	end = strlen(numberCheck) - 1;
+    }
+  else
+    {
+      start = strlen(numberCheck) - lastMatch;
+      end = lastMatch;
+    }
 	while(start <= end)
 	{
 		if(numberCheck[start] != numberCheck[end])
