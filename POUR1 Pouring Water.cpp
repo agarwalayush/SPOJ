@@ -13,6 +13,7 @@
 		// fails if
 		// 1) requested size (c) is larger than containers can provide (a/b)
 		// 2) a is a multiple of b and c is not a multiple of b (ex: a = 3, b = 12, c needs to be a multiple of 3 (3, 6, 9 , 12) or it can't be produced)
+		if ((c > a) || (a%b==0 && c%b!=0))
 		{
 			return -1;
 		}
